@@ -1,0 +1,20 @@
+#tableInit {
+    background-color: lightgray;
+    height: 100%;
+    width: 260px;
+}
+
+#tableOrder {
+    background-color: beige;
+    height: 100%;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.floatTables {
+    float: left;
+}
+
+#sizeNumber {
+    width: 170px;
+}
