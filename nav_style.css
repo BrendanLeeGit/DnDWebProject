@@ -1,0 +1,47 @@
+nav {
+    background-color: steelblue;
+    box-shadow: 0 2px 50px 0 rgb(0, 0, 0);
+}
+
+.li_color {
+    background-color: steelblue;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1546962339-5ff89552b8ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80");
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+
+h1, p {
+    color: white;
+}
+
+table {
+    margin-top: 100px;
+    background-color: gray;
+    border-spacing: 200px;
+}
+
+tr, td {
+    border: solid 2px black;
+    padding: 100px;
+}
+
+.button {
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.button:hover {
+    color: white;
+    background-color: #326793;
+    border-radius: 10px;
+}
+
+.button_li:hover {
+    color: white;
+    background-color: #326793;
+}
