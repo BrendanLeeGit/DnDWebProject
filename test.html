@@ -106,6 +106,15 @@
                                 b.parentElement.parentElement.remove();
                         }
 
+                        function clearTable() {
+                                clearArray();
+
+                                table = document.getElementById("entityTable");
+                                while (table.rows.length > 1) {
+                                        table.deleteRow(1);
+                                }
+                        }
+
                         // test functions
                         function sayHi() {
                             document.write("Hi");
@@ -136,6 +145,7 @@
                 <button onclick = "printArray()">Print Array</button>
                 <button onclick = "createTable()">Create Table</button>
                 <button onclick = "clearArray()">Clear Array</button>
+                <button onclick = "clearTable()">Clear Table</button>
 
                 <!-- Create a new player on submit and store in the table on the right in order of ascending initiative -->
                 <div>
