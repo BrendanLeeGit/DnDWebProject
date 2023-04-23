@@ -1,7 +1,13 @@
+/**
+ * @type {array}
+ */
 var entities = [];
 
-//sorts array based off of intiative only
 var temp;
+/**
+ * Sort array in descending order
+ * @returns {void}
+ */
 function sortArray() {
         for (var i = 0; i < entities.length; i++) 
         {
@@ -17,6 +23,10 @@ function sortArray() {
 
 }
 
+/**
+ * Add element to array
+ * @returns {void}
+ */
 function addArray() {
         name = document.entityForm.entityName.value;
         race = document.entityForm.race.value;
@@ -28,6 +38,10 @@ function addArray() {
         checkEntity();
 }
 
+/**
+ * Create table from array
+ * @returns {void}
+ */
 function createTable() {
         for (var i = 0; i < entities.length; i++) {
                 var table, newRow, name, race, entityClass, init, edit, del
@@ -49,13 +63,22 @@ function createTable() {
         }
 }
 
-function deleteRow(b) { // button's parent is cell and cell's parent is row
+/**
+ * Delete row from table
+ * @param {*} b - This is the current row parameter
+ * @returns {void}
+ */
+function deleteRow(b) {                                 // button's parent is cell and cell's parent is row
         index = b.parentElement.parentElement.rowIndex; // have to get index of row
-        entities.splice(index - 1, 1); // -1 because headings are index 0 in table
-        checkEntity(); // checks array (so the array above the form changes)
+        entities.splice(index - 1, 1);                  // -1 because headings are index 0 in table
+        checkEntity();                                  // checks array (so the array above the form changes)
         b.parentElement.parentElement.remove();
 }
 
+/**
+ * Clears the table when `clearArr` parameter is true
+ * @param {Boolean} clearArr - This is the `clearArr` parameter
+ */
 function clearTable(clearArr) { // accepts a boolean parameter to clear the array or just the table's <tr></tr>
         if (clearArr == true) {
                 clearArray();
@@ -67,6 +90,10 @@ function clearTable(clearArr) { // accepts a boolean parameter to clear the arra
         }
 }
 
+/**
+ * Allows user to go to the next row in the table/array and will shift the table up
+ * @returns {void}
+ */
 function nextEntity() {
         // press button, shift gets rid of the first element and moves everyone over in the array, clears the table and recreates the table
         temp = entities[0];

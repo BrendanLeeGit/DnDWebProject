@@ -1,6 +1,172 @@
 <!DOCTYPE html>
+
 <html>
-  <body>Hello there
+
+  <head>
+    <title>
+      D&D Combat Tool
+    </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="nav_style.css">
+
+  </head>
+
+  <body>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>D&D Combat Tool</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- COMBAT GUIDE & CONDITIONS -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle button" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Combat Guide & Conditions
+              </a>
+              <ul class="dropdown-menu li_color">
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/sources/basic-rules/combat">Combat Guide</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/sources/basic-rules/appendix-a-conditions">Conditions</a>
+                </li>
+              </ul>
+            </li>
+            <!-- CLASSES -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle button" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Classes
+              </a>
+              <ul class="dropdown-menu li_color">
+                <li><a class="dropdown-item button_li" target="_blank" href="https://www.dndbeyond.com/classes">For More -
+                    Click Here</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/barbarian">Barbarian</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/bard">Bard</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/cleric">Cleric</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/druid">Druid</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/fighter">Fighter</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/monk">Monk</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/paladin">Paladin</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/ranger">Ranger</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/rogue">Rogue</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/sorcerer">Sorcerer</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/warlock">Warlock</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/classes/wizard">Wizard</a></li>
+              </ul>
+            </li>
+            <!-- RACES -->
+            <li class="nav-item dropdown">
+              <a a class="nav-link dropdown-toggle button" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Races
+              </a>
+              <ul class="dropdown-menu li_color">
+                <li><a class="dropdown-item button_li" target="_blank" href="https://www.dndbeyond.com/races">For More -
+                    Click Here</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/16-dragonborn">Dragonborn</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/13-dwarf">Dwarf</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/3-elf">Elf</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/18-gnome">Gnome</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/20-half-elf">Half-Elf</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/14-halfling">Halfling</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/2-half-orc">Half-Orc</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/1-human">Human</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.dndbeyond.com/races/7-tiefling">Tiefling</a></li>
+              </ul>
+            </li>
+            <!-- SPELLS -->
+            <li class="nav-item dropdown">
+              <a a class="nav-link dropdown-toggle button" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Spells
+              </a>
+              <ul class="dropdown-menu li_color">
+                <li><a class="dropdown-item button_li" target="_blank" href="https://www.dndbeyond.com/spells">D&DBeyond -
+                    All Spells</a></li>
+                <li><a class="dropdown-item button_li" target="_blank" href="http://dnd5e.wikidot.com/spells">Wikidot -
+                    All Spells</a></li>
+              </ul>
+            </li>
+            <!-- MONSTERS -->
+            <li class="nav-item dropdown">
+              <a a class="nav-link dropdown-toggle button" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Monsters
+              </a>
+              <ul class="dropdown-menu li_color">
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://www.aidedd.org/dnd-filters/monsters.php">AideDD - Monsters</a></li>
+                <li><a class="dropdown-item button_li" target="_blank" href="https://www.dndbeyond.com/monsters">D&DBeyond
+                    - Monsters</a></li>
+                <li><a class="dropdown-item button_li" target="_blank"
+                    href="https://roll20.net/compendium/dnd5e/Monsters%20List#content">Roll20 - Monsters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <p>FORM</p>
+          </td>
+          <td rowspan="2">
+            <h1>TABLE</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugiat ipsam, eligendi iure esse dolorem
+              molestiae rem maxime dolorum perferendis enim voluptas possimus expedita fuga amet hic, vel tenetur odio.
+            </h1>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p>DICE ROLLS</p>
+          </td>
+        </tr>
+      </table>
+    </div>
   </body>
+
 </html>
-  

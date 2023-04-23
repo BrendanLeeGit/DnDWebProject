@@ -1,10 +1,15 @@
 nav {
-    background-color: steelblue;
+    background-color: #c73032;
     box-shadow: 0 2px 50px 0 rgb(0, 0, 0);
 }
 
+.navbar-brand, .nav-link, .dropdown-item {
+    transition-duration: 0.4s;
+    color: white;
+}
+
 .li_color {
-    background-color: steelblue;
+    background-color: #c73032;
 }
 
 body {
@@ -37,11 +42,11 @@ tr, td {
 
 .button:hover {
     color: white;
-    background-color: #326793;
+    background-color: #8a1a1c;
     border-radius: 10px;
 }
 
 .button_li:hover {
     color: white;
-    background-color: #326793;
+    background-color: #8a1a1c;
 }
