@@ -59,7 +59,7 @@ function createTable() {
                 race.innerText = entities[i][1];
                 entityClass.innerText = entities[i][2];
                 init.innerText = entities[i][3];
-                del.innerHTML = "<button onclick = 'deleteRow(this)''>X</button>";
+                del.innerHTML = "<button class='button_delete' onclick = 'deleteRow(this)''>X</button>";
         }
 }
 
