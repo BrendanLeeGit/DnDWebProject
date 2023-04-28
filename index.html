@@ -149,6 +149,8 @@
       </div>
     </nav>
 
+
+
     <!-- Hidden field: entities array from table.js -->
     <p id="test" hidden></p>
     <br><br>
@@ -205,13 +207,13 @@
                           Add a clear table button to clear the table -->
           <div class="container_table overflow-auto">
             <table id="entityTable" class="table table-striped table-hover rounded rounded-3 overflow-hidden" width="100%">
-              <tr style="vertical-align: middle" align="center">
-                  <th style="color: #090707">Name</th>
-                  <th style="color: #090707">Race</th>
-                  <th style="color: #090707">Class</th>
-                  <th style="color: #090707">Initiative</th>
+              <tr style="vertical-align: middle">
+                  <th>Name</th>
+                  <th>Race</th>
+                  <th>Class</th>
+                  <th>Initiative</th>
                   <th><button class="button_submit button_delete button2_wh" style="margin-right: 20px" onclick="clearTable(true)">Clear Table</button>
-                    <button class="button_submit button2_wh" onclick="nextEntity()">Next Entity</button></th>
+                    <button class="button_submit button2_wh" style="margin-right: -50px" onclick="nextEntity()">Next Entity</button></th>
               </tr>
             </table>
           </div>
@@ -220,8 +222,97 @@
 
       <tr>
         <td>
+          <br>
           <div class="container_form">
-            Placeholder for dice rolls.
+            <div>
+              <table>
+                  <tr>
+                      <td style="width: 200px;">
+                          <div style="white-space: nowrap;">
+                            <img src="./Images/Dice1.png" height="45px" width="40px">
+                            <button class="btn btn-dark" style="width: 80px;" onclick="rollDice(20, 'd20')">D20</button><br>
+                          </div>
+                          
+                          
+                      </td>
+                      <td>
+                          <p1 id = "d20">0</p1><br>
+                      </td>
+                  </tr>
+      
+                  <tr>
+                      <td>
+                        <div style="white-space: nowrap;">
+                          <img src="./Images/Dice5.png" height="45px" width="40px">
+                          <button class="btn btn-dark" style="width: 80px;" onclick="rollDice(12, 'd12')">D12</button><br>
+                        </div>                          
+                      </td>
+                      <td>
+                          <p1 id = "d12">0</p1><br>
+                      </td>
+                  </tr>
+      
+                  <tr>
+                      <td>
+                        <div style="white-space: nowrap;">
+                          <img src="./Images/Dice4.png" height="45px" width="40px">
+                          <button class="btn btn-dark" style="width: 80px;" onclick="rollDice(100, 'd100')">D100</button><br>
+                        </div>                          
+                      </td>
+                      <td>
+                          <p1 id = "d100">0</p1><br>
+                      </td>
+                  </tr>
+      
+                  <tr>
+                      <td>
+                        <div style="white-space: nowrap;">
+                          <img src="./Images/Dice4.png" height="45px" width="40px">
+                          <button class="btn btn-dark" style="width: 80px;" onclick="rollDice(10, 'd10')">D10</button><br>
+                        </div>                          
+                      </td>
+                      <td>
+                          <p1 id = "d10">0</p1><br>
+                      </td>
+                  </tr>
+      
+                  <tr>
+                      <td>
+                        <div style="white-space: nowrap;">
+                          <img src="./Images/Dice2.png" height="45px" width="40px">
+                          <button class="btn btn-dark" style="width: 80px;" onclick="rollDice(8, 'd8')">D8</button><br>
+                        </div>                          
+                      </td>
+                      <td>
+                          <p1 id = "d8">0</p1><br>
+                      </td>
+                  </tr>
+      
+                  <tr>
+                      <td>
+                        <div style="white-space: nowrap;">
+                          <img src="./Images/Dice6.png" height="45px" width="40px">
+                          <button class="btn btn-dark" style="width: 80px;" onclick="rollDice(6, 'd6')">D6</button><br>
+                        </div>                          
+                      </td>
+                      <td>
+                          <p1 id = "d6">0</p1><br>
+                      </td>
+                  </tr>
+      
+                  <tr>
+                      <td>
+                        <div style="white-space: nowrap;">
+                          <img src="./Images/Dice3.png" height="45px" width="40px">
+                          <button class="btn btn-dark" style="width: 80px;" onclick="rollDice(4, 'd4')">D4</button><br>
+                        </div>                          
+                      </td>
+                      <td>
+                          <p1 id = "d4">0</p1><br>
+                      </td>
+                  </tr>
+              </table>
+          </div>
           </div>
         </td>
       </tr>

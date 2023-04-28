@@ -92,7 +92,7 @@ h1, p, table {
 
     box-shadow: 0px 0px 28px 7px #000000bf;
 
-    width: 508px;
+    width: 600px;
     background-color: #c73032;
     outline: transparent;
 
@@ -152,4 +152,10 @@ h1, p, table {
 #infoIcon:hover {
     color: lightgray;
     transition-duration: 0.4s;
+}
+
+p1{
+    font-size: 30px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
