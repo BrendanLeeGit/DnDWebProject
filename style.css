@@ -15,13 +15,13 @@
     float: left;
 }
 
-#sizeNumber {
-    width: 170px;
+.widthSize {
+    width: 185px;
 }
 
 nav {
     background-color: #c73032;
-    box-shadow: 0 2px 50px 0 rgb(0, 0, 0);
+    box-shadow: 0 2px 50px 0 #000000;
 }
 
 .navbar-brand, .nav-link, .dropdown-item {
@@ -36,7 +36,7 @@ nav {
 body {
     background-image: url("https://images.unsplash.com/photo-1546962339-5ff89552b8ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1168&q=80");
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #000000bf;
     background-size: cover;
     background-blend-mode: soft-light;
 
@@ -74,9 +74,9 @@ h1, p, table {
 
     margin-left: 250px;
 
-    box-shadow: 0px 0px 28px 7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 28px 7px #000000bf;
 
-    width: 400px;
+    width: 305px;
     background-color: #c73032;
     outline: transparent;
 
@@ -90,7 +90,7 @@ h1, p, table {
 
     margin-left: 100px;
 
-    box-shadow: 0px 0px 28px 7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 28px 7px #000000bf;
 
     width: 600px;
     background-color: #c73032;
@@ -101,26 +101,55 @@ h1, p, table {
     height: 600px;
 }
 
-#button_submit {
+.button_submit {
     color: white;
     background-color: #8a1a1c;
 
-    border: none;
-    margin: auto;
-    display:block;
-
+    border: 0.5mm solid #090707;
     border-radius: 15px;
+
+    margin: auto;
+    display: block;
+    float: left;
+}
+
+.button_submit:hover {
+    color: white;
+    font-weight: 550;
+
+    transform: scale(1.04);
+    border: 0.6mm solid black;
+}
+
+/* Submit button */
+#button_wh {
+    width: 80px;
+    height: 40px;
+}
+
+/* Clear Table, Next Entity button */
+.button2_wh {
+    width: 97px;
+    height: 40px;
 }
 
 .button_delete {
     color: white;
     background-color: #8a1a1c;
 
-    border: none;
-    margin:auto;
-    display:block;
+    margin: auto;
+    display: block;
 }
 
 .form_spacing {
     margin-bottom: 10px;
+}
+
+.form-control-sm {
+    border: 2px solid #212121;
+}
+
+#infoIcon:hover {
+    color: lightgray;
+    transition-duration: 0.4s;
 }
