@@ -152,7 +152,9 @@
 
 
     <!-- Hidden field: entities array from table.js -->
-    <p id="test" hidden></p>
+    <p id="test"></p>
+    <button onclick="displayImage()">Display Image</button>
+    <img src ="./Images/default-avatar-builder.png" id="displayedPic" height="100px" width="100px">
     <br><br>
 
     <table>
@@ -192,6 +194,11 @@
                 </tr>
 
                 <tr>
+                  <td><label>Picture:</label></td>
+                  <td><input class="form-control-sm form_spacing widthSize" style="border: none; width:200px" type="file" name="pic" value="null"></td>
+                </tr>
+
+                <tr>
                   <td>
                     <input id="button_wh" class="button_submit" type="submit" value="Submit">
                   </td>
@@ -207,13 +214,13 @@
                           Add a clear table button to clear the table -->
           <div class="container_table overflow-auto">
             <table id="entityTable" class="table table-striped table-hover rounded rounded-3 overflow-hidden" width="100%">
-              <tr style="vertical-align: middle">
-                  <th>Name</th>
-                  <th>Race</th>
-                  <th>Class</th>
-                  <th>Initiative</th>
-                  <th><button class="button_submit button_delete button2_wh" style="margin-right: 20px" onclick="clearTable(true)">Clear Table</button>
-                    <button class="button_submit button2_wh" style="margin-right: -50px" onclick="nextEntity()">Next Entity</button></th>
+              <tr style="vertical-align: middle" align="center">
+                  <th style="color: #090707">Name</th>
+                  <th style="color: #090707">Race</th>
+                  <th style="color: #090707">Class</th>
+                  <th style="color: #090707">Initiative</th>
+                  <th style="color: #090707"><button class="button_submit button_delete button2_wh" style="margin-right: 20px" onclick="clearTable(true)">Clear Table</button>
+                    <button class="button_submit button2_wh" onclick="nextEntity()">Next Entity</button></th>
               </tr>
             </table>
           </div>
