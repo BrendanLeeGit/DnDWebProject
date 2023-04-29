@@ -60,7 +60,7 @@ function displayImage() {
  */
 function createTable() {
         for (var i = 0; i < entities.length; i++) {
-                var table, newRow, name, race, entityClass, init, edit, del
+                var table, newRow, name, race, entityClass, init, del;
                 table = document.getElementById("entityTable");
                 newRow = table.insertRow();
 
@@ -132,6 +132,12 @@ function nextEntity() {
 
 function alertMessage(msg) {
         alert(msg);
+}
+
+function confirmationBox() {
+        if(confirm("Are you sure you want to clear the entity table?") == true) {
+                clearTable(true);
+        }
 }
 
 // test functions
