@@ -48,20 +48,24 @@ function addArray() {
  * @returns {void}
  */
 function displayImage() { // display the first image in the array only
+
         var divPic = document.getElementById("divPic");
         divPic.innerHTML = "";
 
         var img = document.createElement("img");
 
-        if(entities[0][4] != undefined) {
-                img.src = URL.createObjectURL(entities[0][4]);
-        } else {
-                img.src = "./Images/default-avatar-builder.png";
+        if(entities.length != 0) {
+                if(entities[0][4] === undefined) {
+                        img.src = "./Images/default-avatar-builder.png";
+                } else {
+                        img.src = URL.createObjectURL(entities[0][4]);
+                }
+        
+                img.style.width = "150px";
+                img.style.height = "150px";
+                img.style.borderRadius = "10px";
+                divPic.appendChild(img);
         }
-
-        img.style.width = "100px";
-        img.style.height = "100px";
-        divPic.appendChild(img);
 
         setDisplayName();
 }
@@ -72,7 +76,7 @@ function displayImage() { // display the first image in the array only
  */
 function setDisplayName() {
         if (entities.length == 0) {
-                document.getElementById("displayName").innerHTML = "";
+                document.getElementById("displayName").innerHTML = "Add a player or enemy to the table to display their portrait here";
         } else {
                 document.getElementById("displayName").innerHTML = entities[0][0];
         }
