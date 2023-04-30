@@ -164,3 +164,38 @@ function rollDice(max, diceNumber){
 //give the dice number. for ex, a d6 would have a max of 6 ofc
 document.getElementById(diceNumber).innerHTML = getRandomInt(0, max);
 }
+
+var health = [0, 0, 0, 0];
+var maxHealth = [0, 0, 0, 0];
+
+var changeAmounts = ['changeAmountOne', 'changeAmountTwo', 'changeAmountThree', 'changeAmountFour'];
+var maxHealths = ['maxHealthChangeAmountOne', 'maxHealthChangeAmountTwo', 'maxHealthChangeAmountThree', 'maxHealthChangeAmountFour']
+
+function incrementHealth(which){
+        health[which] += parseInt(document.getElementById(changeAmounts[which]).value);
+        updateHealth();
+}
+
+function reduceHealth(which){
+        health[which] -= parseInt(document.getElementById(changeAmounts[which]).value);
+        updateHealth();
+}
+
+function updateHealth(){
+        document.getElementById("currentHealthOne").innerHTML = health[0];
+        document.getElementById("currentHealthTwo").innerHTML = health[1];
+        document.getElementById("currentHealthThree").innerHTML = health[2];
+        document.getElementById("currentHealthFour").innerHTML = health[3];
+}
+
+function setMaxHealth(which){
+        maxHealth[which] = parseInt(document.getElementById(maxHealths[which]).value);
+        updateMaxHealth();
+}
+
+function updateMaxHealth(){
+        document.getElementById("maxHealthOne").innerHTML = maxHealth[0];
+        document.getElementById("maxHealthTwo").innerHTML = maxHealth[1];
+        document.getElementById("maxHealthThree").innerHTML = maxHealth[2];
+        document.getElementById("maxHealthFour").innerHTML = maxHealth[3];
+}

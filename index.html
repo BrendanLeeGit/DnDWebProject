@@ -329,8 +329,168 @@
         </td>
 
         <td>
-          <div class="container_form">
-            Placeholder for hp
+          <div class="container_form" style="width: 390px;">
+            <div style="height: 395px; width: 400px; Overflow-y:scroll;">
+
+              <div class="container_form_health" style="font-size: 11px;">
+                <div style="height:135px; width: 300px;">
+                  <table style="width:100%;">
+                    <tr >
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" class="btn btn-danger" onclick="incrementHealth(0)">Heal</button>
+                      </td>
+                      <td>
+                        <input placeholder="Name" type="text" style="height: 40px; width: 200px; font-size: 30px;">
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <input type="text" id="changeAmountOne" style="font-size: 20px; height: 40px; width: 60px;"></input>
+                      </td>
+                      <td style="font-size: 30px; text-align: center; width: 30%;">
+                        <div>
+                          <span id="currentHealthOne">0</span> / <span id="maxHealthOne">0</span>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" onclick="reduceHealth(0)" class="btn btn-danger">Dmg</button>
+                      </td>
+                      <td>
+                        <input type="text" placeholder="MaxHP" id="maxHealthChangeAmountOne" style="height: 40px; width: 100px; font-size: 30px;">
+                        <input type="button" class="btn btn-warning" value="Submit" onclick="setMaxHealth(0)" style="height: 100%; margin-top:-14px;"; id="maxHPSubmit">
+                      </td>
+                    </tr>
+                    
+                  </table>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="container_form_health" style="font-size: 11px;">
+                <div style="height:135px; width: 300px;">
+                  <table style="width:100%;">
+                    <tr >
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" class="btn btn-danger" onclick="incrementHealth(1)">Heal</button>
+                      </td>
+                      <td>
+                        <input placeholder="Name" type="text" style="height: 40px; width: 200px; font-size: 30px;">
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <input type="text" id="changeAmountTwo" style="font-size: 20px; height: 40px; width: 60px;"></input>
+                      </td>
+                      <td style="font-size: 30px; text-align: center; width: 30%;">
+                        <div>
+                          <span id="currentHealthTwo">0</span> / <span id="maxHealthTwo">0</span>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" onclick="reduceHealth(1)" class="btn btn-danger">Dmg</button>
+                      </td>
+                      <td>
+                        <input type="text" placeholder="MaxHP" id="maxHealthChangeAmountTwo" style="height: 40px; width: 100px; font-size: 30px;">
+                        <input type="button" class="btn btn-warning" value="Submit" onclick="setMaxHealth(1)" style="height: 100%; margin-top:-14px;"; id="maxHPSubmit">
+                      </td>
+                    </tr>
+                    
+                  </table>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="container_form_health" style="font-size: 11px;">
+                <div style="height:135px; width: 300px;">
+                  <table style="width:100%;">
+                    <tr >
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" class="btn btn-danger" onclick="incrementHealth(2)">Heal</button>
+                      </td>
+                      <td>
+                        <input placeholder="Name" type="text" style="height: 40px; width: 200px; font-size: 30px;">
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <input type="text" id="changeAmountThree" style="font-size: 20px; height: 40px; width: 60px;"></input>
+                      </td>
+                      <td style="font-size: 30px; text-align: center; width: 30%;">
+                        <div>
+                          <span id="currentHealthThree">0</span> / <span id="maxHealthThree">0</span>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" onclick="reduceHealth(2)" class="btn btn-danger">Dmg</button>
+                      </td>
+                      <td>
+                        <input type="text" placeholder="MaxHP" id="maxHealthChangeAmountThree" style="height: 40px; width: 100px; font-size: 30px;">
+                        <input type="button" class="btn btn-warning" value="Submit" onclick="setMaxHealth(2)" style="height: 100%; margin-top:-14px;"; id="maxHPSubmit">
+                      </td>
+                    </tr>
+                    
+                  </table>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="container_form_health" style="font-size: 11px;">
+                <div style="height:135px; width: 300px;">
+                  <table style="width:100%;">
+                    <tr >
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" class="btn btn-danger" onclick="incrementHealth(3)">Heal</button>
+                      </td>
+                      <td>
+                        <input placeholder="Name" type="text" style="height: 40px; width: 200px; font-size: 30px;">
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <input type="text" id="changeAmountFour" style="font-size: 20px; height: 40px; width: 60px;"></input>
+                      </td>
+                      <td style="font-size: 30px; text-align: center; width: 30%;">
+                        <div>
+                          <span id="currentHealthFour">0</span> / <span id="maxHealthFour">0</span>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <button type="button" style="width: 60px; height: 30px; padding: .05em;" onclick="reduceHealth(3)" class="btn btn-danger">Dmg</button>
+                      </td>
+                      <td>
+                        <input type="text" placeholder="MaxHP" id="maxHealthChangeAmountFour" style="height: 40px; width: 100px; font-size: 30px;">
+                        <input type="button" class="btn btn-warning" value="Submit" onclick="setMaxHealth(3)" style="height: 100%; margin-top:-14px;"; id="maxHPSubmit">
+                      </td>
+                    </tr>
+                    
+                  </table>
+
+                </div>
+              </div>
+
+            </div>
           </div>
         </td>
       </tr>

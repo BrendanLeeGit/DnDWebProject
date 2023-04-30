@@ -83,6 +83,20 @@ h1, p, table {
     padding: 15px;
 }
 
+.container_form_health {
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+
+    opacity: 0.75;
+
+    width: 350px;
+    background-color: rgb(0, 0, 0);
+    outline: black;
+
+    padding: 15px;
+}
+
 .container_table {
     border-radius: 25px;
     -moz-border-radius: 25px;
