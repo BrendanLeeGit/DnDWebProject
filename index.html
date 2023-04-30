@@ -153,8 +153,6 @@
 
     <!-- Hidden field: entities array from table.js -->
     <p id="test"></p>
-    <button onclick="displayImage()">Display Image</button>
-    <img src ="./Images/default-avatar-builder.png" id="displayedPic" height="100px" width="100px">
     <br><br>
 
     <table>
@@ -162,7 +160,7 @@
         <td>
           <div class="container_form">
             <table>
-              <form class="form-group form_spacing" name="entityForm" onsubmit="addArray(); clearTable(false); createTable(); return false">
+              <form class="form-group form_spacing" name="entityForm" onsubmit="addArray(); clearTable(false); createTable(); displayImage();return false">
                 <tr>
                   <td colspan="2" style="padding-bottom: 10px;font-weight: bold">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16" style="cursor: pointer" id="infoIcon" onclick="alertMessage('Enter a player or enemy\'s name, race, and initiative (range: -99 to 99).')">
@@ -195,7 +193,7 @@
 
                 <tr>
                   <td><label>Picture:</label></td>
-                  <td><input class="form-control-sm form_spacing widthSize" style="border: none; width:200px" type="file" name="pic" value="null"></td>
+                  <td><input class="form-control-sm form_spacing widthSize" style="border: none; width:200px" id="entityPic" type="file" name="pic" accept=".png,.jpg,.jpg,.gif"></td>
                 </tr>
 
                 <tr>
@@ -227,7 +225,8 @@
         </td>
         <td>
           <div class="container_form">
-            Placeholder for picture
+            <div id="divPic"></div>
+            <p id="displayName"></p>
           </div>
         </td>
       </tr>

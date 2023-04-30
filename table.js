@@ -28,30 +28,54 @@ function sortArray() {
  * @returns {void}
  */
 function addArray() {
+        var name, race, entityClass, init, entityPic;
         name = document.entityForm.entityName.value;
         race = document.entityForm.race.value;
         entityClass = document.entityForm.entityClass.value;
         init = document.entityForm.init.value;
-        pic = document.entityForm.init.pic;
+        
+        entityPic = document.getElementById("entityPic");
+        entityPic = entityPic.files[0];
 
-        entities.push([name, race, entityClass, init, pic]);
+        entities.push([name, race, entityClass, init, entityPic]);
         sortArray();
         checkEntity();
 }
 
 /**
- * Display the first image in the array. If there is no image uploaded, display a default image
- * Display when submit and next entity is clicked
- * Remove when clear table is clicked
+ * Display the first entity who is first in the array. If there is no image uploaded, display the default avatar image.
+ * This function is called on Initiative Tracker's form submit, nextEntity(), confirmationBox(), and "x" in the Entity Table
  * @returns {void}
  */
-function displayImage() {
-        if(entities[0][4] == undefined) {
-                document.getElementById("displayedPic").src = "./Images/default-avatar-builder.png";
-        } else { // re-display
-                
+function displayImage() { // display the first image in the array only
+        var divPic = document.getElementById("divPic");
+        divPic.innerHTML = "";
+
+        var img = document.createElement("img");
+
+        if(entities[0][4] != undefined) {
+                img.src = URL.createObjectURL(entities[0][4]);
+        } else {
+                img.src = "./Images/default-avatar-builder.png";
         }
 
+        img.style.width = "100px";
+        img.style.height = "100px";
+        divPic.appendChild(img);
+
+        setDisplayName();
+}
+
+/**
+ * Sets the display name to the entity who is first in the array. If there are no entities in the array, remove the name.
+ * @returns {void}
+ */
+function setDisplayName() {
+        if (entities.length == 0) {
+                document.getElementById("displayName").innerHTML = "";
+        } else {
+                document.getElementById("displayName").innerHTML = entities[0][0];
+        }
 }
 
 /**
@@ -76,7 +100,7 @@ function createTable() {
                 entityClass.innerText = entities[i][2];
                 init.innerText = entities[i][3];
 
-                del.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16" style="cursor: pointer" onclick="deleteRow(this)"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg>';
+                del.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16" style="cursor: pointer" onclick="deleteRow(this);displayImage()"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg>';
                 newRow.style.textAlign = 'center';
                 newRow.style.color = '#090707';
                 // "<button class='button_delete' onclick = 'deleteRow(this)''>X</button>";
@@ -98,6 +122,7 @@ function deleteRow(b) {                                 // button's parent is ce
 /**
  * Clears the table when `clearArr` parameter is true
  * @param {Boolean} clearArr - This is the `clearArr` parameter
+ * @returns {void}
  */
 function clearTable(clearArr) { // accepts a boolean parameter to clear the array or just the table's <tr></tr>
         if (clearArr == true) {
@@ -128,23 +153,41 @@ function nextEntity() {
         } else {
                 alertMessage("Error: Need to add a minimum of two entities to the table.");
         }
+        displayImage();
 }
 
+/**
+ * Alerts the user based on the specified message parameter value
+ * @param {*} msg
+ * @returns {void}
+ */
 function alertMessage(msg) {
         alert(msg);
 }
 
+/**
+ * Confirms whether or not the user wants to clear the table
+ * @returns {void}
+ */
 function confirmationBox() {
         if(confirm("Are you sure you want to clear the entity table?") == true) {
                 clearTable(true);
+                displayImage();
         }
 }
 
-// test functions
+/**
+ * For the hidden array field in index.html
+ * @returns {void}
+ */
 function checkEntity() {
         document.getElementById("test").innerHTML = entities;
 }
 
+/**
+ * Clears the array
+ * @returns {void}
+ */
 function clearArray() {
         entities = [];
         checkEntity();
