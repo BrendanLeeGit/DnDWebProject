@@ -88,8 +88,6 @@ h1, p, table {
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
 
-    opacity: 0.75;
-
     width: 350px;
     background-color: rgb(0, 0, 0);
     outline: black;
