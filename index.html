@@ -163,7 +163,7 @@
               <form class="form-group form_spacing" name="entityForm" onsubmit="addArray(); clearTable(false); createTable(); displayImage();return false">
                 <tr>
                   <td colspan="2" style="padding-bottom: 10px;font-weight: bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16" style="cursor: pointer" id="infoIcon" onclick="alertMessage('Enter a player or enemy\'s name, race, and initiative (range: -99 to 99).')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16" style="cursor: pointer" id="infoIcon" onclick="alertMessage('Enter a player or enemy\'s name, race, initiative (range: -99 to 99), and armor class (AC; range: -7 to 114).')">
                       <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                     </svg> Initiative Tracker
                   </td>
@@ -188,6 +188,12 @@
                 <tr>
                   <td><label>Initiative:</label></td>
                   <td><input class="form-control-sm form_spacing widthSize" type="number" name="init" min="-99" max="99" required>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><label>AC:</label></td>
+                  <td><input class="form-control-sm form_spacing widthSize" type="number" name="ac" min="-7" max="114" required>
                   </td>
                 </tr>
 
@@ -217,6 +223,7 @@
                   <th style="color: #090707">Race</th>
                   <th style="color: #090707">Class</th>
                   <th style="color: #090707">Initiative</th>
+                  <th style="color: #090707">AC</th>
                   <th style="color: #090707"><button class="button_submit button_delete button2_wh" style="margin-left: 25px;margin-right: 27px" onclick="confirmationBox()">Clear Table</button>
                     <button class="button_submit button2_wh" onclick="nextEntity()">Next Entity</button></th>
               </tr>

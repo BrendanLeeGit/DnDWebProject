@@ -13,7 +13,7 @@ function sortArray() {
         {
                 for (var j = i + 1; j < entities.length; j++) 
                 {
-                        if (Number(entities[i][3]) < Number(entities[j][3])) {
+                        if (Number(entities[i][4]) < Number(entities[j][4])) {
                                 temp = entities[i];
                                 entities[i] = entities[j];
                                 entities[j] = temp;
@@ -33,11 +33,12 @@ function addArray() {
         race = document.entityForm.race.value;
         entityClass = document.entityForm.entityClass.value;
         init = document.entityForm.init.value;
+        ac = document.entityForm.ac.value;
         
         entityPic = document.getElementById("entityPic");
         entityPic = entityPic.files[0];
 
-        entities.push([name, race, entityClass, init, entityPic]);
+        entities.push([name, race, entityClass, init, ac, entityPic]);
         sortArray();
         checkEntity();
 }
@@ -55,10 +56,10 @@ function displayImage() { // display the first image in the array only
         var img = document.createElement("img");
 
         if(entities.length != 0) {
-                if(entities[0][4] === undefined) {
+                if(entities[0][5] === undefined) {
                         img.src = "./Images/default-avatar-builder.png";
                 } else {
-                        img.src = URL.createObjectURL(entities[0][4]);
+                        img.src = URL.createObjectURL(entities[0][5]);
                 }
         
                 img.style.width = "150px";
@@ -88,7 +89,7 @@ function setDisplayName() {
  */
 function createTable() {
         for (var i = 0; i < entities.length; i++) {
-                var table, newRow, name, race, entityClass, init, del;
+                var table, newRow, name, race, entityClass, init, ac, del;
                 table = document.getElementById("entityTable");
                 newRow = table.insertRow();
 
@@ -96,13 +97,16 @@ function createTable() {
                 race = newRow.insertCell(1);
                 entityClass = newRow.insertCell(2);
                 init = newRow.insertCell(3);
-                del = newRow.insertCell(4);
+                ac = newRow.insertCell(4);
+
+                del = newRow.insertCell(5);
 
 
                 name.innerText = entities[i][0];
                 race.innerText = entities[i][1];
                 entityClass.innerText = entities[i][2];
                 init.innerText = entities[i][3];
+                ac.innerText = entities[i][4];
 
                 del.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16" style="cursor: pointer" onclick="deleteRow(this);displayImage()"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg>';
                 newRow.style.textAlign = 'center';
