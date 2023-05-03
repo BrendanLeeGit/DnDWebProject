@@ -13,7 +13,7 @@ function sortArray() {
         {
                 for (var j = i + 1; j < entities.length; j++) 
                 {
-                        if (Number(entities[i][4]) < Number(entities[j][4])) {
+                        if (Number(entities[i][3]) < Number(entities[j][3])) {
                                 temp = entities[i];
                                 entities[i] = entities[j];
                                 entities[j] = temp;
