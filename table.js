@@ -203,12 +203,7 @@ function clearArray() {
 
 function getRandomInt(minimum, maximum){
         var result = Math.floor(Math.random() * (maximum - minimum)) + minimum + 1;
-        if (result == 7){
-            return getRandomInt(minimum, maximum);
-        }
-        else{
-            return result;
-        }
+        return result;
     }
 
 function rollDice(max, diceNumber){
